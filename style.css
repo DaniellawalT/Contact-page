@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --ff-be-vietnam-pro: 'Be Vietnam Pro', sans-serif;
+
+  --fs-heading: 4rem;
+  --fs-subheading: 2rem;
+  --fs-body: 1rem;
+  --fs-label: 0.875rem;
+  --fs-btn-text: 1.25rem;
+
+  --clr-black: #111729;
+  --clr-purple: #4036a9;
+  --clr-grey: #cdd5e0;
+  --clr-white: #ffffff;
+  --clr-soft-white: #f8fafc;
+}
+
+body,h1,h2,h3,p,ul,li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: var(--ff-be-vietnam-pro);
+
+  background: url('/bg-image.svg');
+  background-size: cover;
+}
+
+/*STYLES*/
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 4.25rem;
+}
+
+.logo {
+  margin-top: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-header {
+  color: var(--clr-white);
+  text-align: center;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.contact-header-heading {
+  margin-bottom: 1rem;
+  margin-top: 0;
+
+  font-size: var(--fs-heading);
+}
+
+.contact-header-subheading {
+  margin-bottom: 4.5rem;
+
+  font-weight: 400;
+  font-size: var(--fs-subheading);
+  line-height: 1.5;
+}
+
+.contact-form {
+  padding: 2rem;
+  background-color: rgba(205, 213, 224, 0.2);
+
+  margin: 0 auto;
+  width: fit-content;
+  margin-bottom: 5rem;
+
+  border-radius: 1.5rem;
+  color: var(--clr-white);
+}
+
+.contact-form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem 1.125rem;
+  grid-template-areas:
+    'name name email email'
+    'company company subject subject'
+    'message message message message'
+    'button button button button';
+
+  width: 746px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fs-label);
+  gap: 4px;
+}
+
+.contact-form input,.contact-form select {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fs-label);
+  padding: 1.5rem 1.125rem;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  font-family: var(--ff-be-vietnam-pro);
+  font-weight: 600;
+
+  background-color: var(--clr-white);
+}
+
+.contact-form select {
+  border-right: 1.5rem solid transparent;
+}
+
+.contact-form input::placeholder {
+  color: var(--clr-grey);
+}
+
+.contact-form-name {
+  grid-area: name;
+}
+
+.contact-form-email {
+  grid-area: email;
+}
+
+.contact-form-size {
+  grid-area: company;
+}
+
+.contact-form-subject {
+  grid-area: subject;
+}
+
+.contact-form-message {
+  grid-area: message;
+}
+.contact-form-message input {
+  padding-bottom: 10rem;
+}
+
+.contact-form-button {
+  grid-area: button;
+  padding: 1.5rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-purple);
+  border-radius: 1rem;
+  border: none;
+}
+
+@media (max-width: 1024px) {
+    .contact-header {
+      max-width: 360px;
+    }
+  
+    .contact-header-heading {
+      margin-bottom: 1rem;
+  
+      font-size: 2.5rem;
+    }
+  
+    .contact-header-subheading {
+      margin-bottom: 4.5rem;
+  
+      font-weight: 400;
+      font-size: var(--fs-body);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .container {
+      padding: 0 1.5rem;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }

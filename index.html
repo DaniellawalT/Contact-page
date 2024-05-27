@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="/contact-form-icon.svg" alt="contact form icon" />
+      </div>
+
+      <header class="contact-header">
+        <h1 class="contact-header-heading">
+          Interested in our business pricing?
+        </h1>
+        <h2 class="contact-header-subheading">
+          Fill out the form to view details and we'll contact you as soon as
+          possible.
+        </h2>
+      </header>
+
+      <form action="" class="contact-form">
+        <div class="contact-form-container">
+          <!-- Name -->
+          <label class="contact-form-name">
+            Name
+            <input type="text" id="name" placeholder="Ethan Johnson" />
+          </label>
+          <!-- Email -->
+          <label class="contact-form-email"
+            >Company Email
+            <input type="email" id="email" placeholder="ethan@johnson.com" />
+          </label>
+          <!-- Company Size -->
+          <label class="contact-form-size">
+            Company Size
+            <select name="company-size" id="company-size">
+              <option value="1-10-employees">1-10 employees</option>
+              <option value="10-50-employees">10-50 employees</option>
+              <option value="50-100-employees" selected>50-100 employees</option>
+            </select>
+          </label>
+          <!-- Subject -->
+          <label class="contact-form-subject">
+            Subject
+            <select name="subject" id="subject">
+              <option value="building-landing-pages" selected>
+                Building Landing pages
+              </option>
+              <option value="design-brand-identity">
+                Design Brand Identity
+              </option>
+            </select>
+          </label>
+          <!-- Message -->
+          <label class="contact-form-message"
+            >Message
+            <input type="text" id="message" value="50-100 employee" />
+          </label>
+
+          <button class="contact-form-button">Contact Sales</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
